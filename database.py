@@ -12,11 +12,11 @@ import datetime
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
 
-DB_HOST = os.getenv("DB_HOST", "localhost")
-DB_NAME = os.getenv("DB_NAME", "resume_ranker")
-DB_USER = os.getenv("DB_USER", "postgres")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "ROOT")
-DB_PORT = os.getenv("DB_PORT", "5432")
+DB_HOST = os.getenv("DB_HOST", "your host name")
+DB_NAME = os.getenv("DB_NAME", "your database name ")
+DB_USER = os.getenv("DB_USER", "your user name ")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "your password name")
+DB_PORT = os.getenv("DB_PORT", "your port")
 
 def get_connection():
     return psycopg2.connect(
