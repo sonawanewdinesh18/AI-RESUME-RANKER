@@ -1,0 +1,199 @@
+/* Global resets and layout */
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  color: #0d47a1;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Responsive Typography */
+h1, h2, h3 {
+  color: #006064;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1rem; }
+  body { font-size: 15px; }
+}
+
+/* Container styling */
+section {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 150, 136, 0.15);
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 25px rgba(0, 150, 136, 0.3);
+}
+
+/* Sidebar */
+.st-emotion-cache-1avcm0n {
+  background: linear-gradient(to bottom, #00bcd4, #b2ebf2) !important;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+/* Buttons */
+button, .stButton > button {
+  background: linear-gradient(to right, #00bcd4, #009688);
+  color: white;
+  padding: 0.6em 1.5em;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 12px rgba(0, 150, 136, 0.25);
+}
+
+button:hover, .stButton > button:hover {
+  background: linear-gradient(to right, #26c6da, #00796b);
+  transform: scale(1.05);
+}
+
+/* Inputs */
+input, select, textarea {
+  border: 1px solid #81d4fa;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  background-color: #f1fcff;
+  color: #004d40;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 2px solid #00acc1;
+  background-color: #e0f7fa;
+  outline: none;
+}
+
+/* Expanders */
+.stExpander {
+  background-color: #ffffff;
+  border-radius: 10px !important;
+  border: 1px solid #b2dfdb;
+  transition: all 0.3s ease-in-out;
+}
+
+.stExpander:hover {
+  box-shadow: 0px 5px 20px rgba(0, 150, 136, 0.2);
+}
+
+/* Explanation block */
+code, pre {
+  background: #e0f2f1;
+  color: #004d40;
+  border-radius: 8px;
+  padding: 12px;
+  display: block;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+}
+
+/* Download Buttons */
+.stDownloadButton > button {
+  background: linear-gradient(to right, #4dd0e1, #00796b) !important;
+  color: white !important;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.5em 1.2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.stDownloadButton > button:hover {
+  background: linear-gradient(to right, #00e5ff, #004d40);
+  transform: translateY(-2px);
+}
+
+/* Job card animation */
+.job-card {
+  background-color: #ffffff;
+  border-left: 6px solid #00acc1;
+  padding: 18px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 188, 212, 0.1);
+  transition: all 0.25s ease-in-out;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.25);
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #00acc1, #4dd0e1);
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0px 4px 10px rgba(0, 188, 212, 0.2);
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+/* Media queries for mobile */
+@media screen and (max-width: 768px) {
+  .stDownloadButton > button,
+  button,
+  .stButton > button {
+    width: 100% !important;
+    font-size: 16px;
+  }
+
+  section, .job-card {
+    padding: 16px;
+    margin: 10px;
+  }
+
+  .navbar {
+    font-size: 16px;
+    padding: 1rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading Hover Glow */
+h1:hover{
+  text-decoration: underline;
+  color: #26c6da;
+  text-shadow: 0 0 8px rgba(38, 198, 218, 0.8);
+  transition: all 0.3s ease;
+}
+
+/* Animated loader */
+.loader {
+  border: 5px solid #e0f2f1;
+  border-top: 5px solid #00acc1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
